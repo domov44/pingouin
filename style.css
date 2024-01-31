@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--couleur-fond);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+:root {
+    --couleur-fond: red;
+    --couleur-primaire: black;
+    --couleur-secondaire: white;
+    --couleur-tertiaire: orange;
+}
+
+.premier-cercle {
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 0 20px black;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.premier-cercle::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 20px black;
+    border-radius: 100%;
+}
+
+.premier-cercle::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px black;
+    border-radius: 100%;
+}
+
+.quatre-cercle {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 35px black inset;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pingouin{
+    height:400px;
+    width:200px;
+    border-radius: 150px;
+    background: var(--couleur-primaire);
+    animation: saut 1s alternate infinite;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    position:relative;
+}
+
+.pingouin::before{
+    top: 50px;
+    left:65px;
+    border-radius: 50px;
+    position:absolute;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: var(--couleur-secondaire);
+}
+
+.pingouin::after{
+    top:50px;
+    right:65px;
+    border-radius: 50px;
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: var(--couleur-secondaire);
+}
+
+.ventre{
+    height:250px;
+    width:150px;
+    background: var(--couleur-secondaire);
+    position: relative;
+    border-radius: 150px;
+}
+
+.ventre::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 3px;
+    background: var(--couleur-primaire);
+    top:45px;
+    left:72px;
+    transform: rotate(-45deg);
+}
+
+.ventre::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 3px;
+    background: var(--couleur-primaire);
+    top:45px;
+    left:72px;
+    transform: rotate(45deg);
+}
+
+@keyframes saut {
+    0%{
+        transform: translateX(0%);
+    
+    }
+
+    100%{
+        transform: translateY(10%);
+    }
+}

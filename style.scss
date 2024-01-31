@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--couleur-fond);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+    --couleur-fond: red;
+    --couleur-primaire: black;
+    --couleur-secondaire:white;
+    --couleur-tertiaire:orange;
+}
+
+.premier-cercle{
+    width:600px;
+    height: 600px;
+    border:solid 2px black;
+    border-radius: 100%;
+    position: relative;
+}
+
+.premier-cercle:before{
+    position: absolute;
+    width:500px;
+    height: 500px;
+    border:solid 2px black;
+    border-radius: 100%;
+}
+
